@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>man</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type='text/javascript' src='path_to_knockoutjs/knockout.js'></script>
+    <script type='text/javascript' src='main.js'></script>
+    <script type='text/javascript' src='path_to_requirejs/require.js'></script>
+
+</head>
+<body>
+<ul data-bind="foreach: products">
+    <li class="product">
+        <strong data-bind="text: name"></strong>
+        <like-or-dislike params="value: userRating"></like-or-dislike>
+    </li>
+</ul>
+<button data-bind="click: addProduct">Add a product</button>
+
+</body>
+</html>
